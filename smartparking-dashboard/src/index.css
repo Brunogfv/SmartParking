@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================================
+   SmartParking - animacoes leves e profissionais
+   ============================================================ */
+
+/* Olhos do SmartBot piscando (so a altura muda, mantendo a forma) */
+@keyframes bot-piscar {
+  0%, 90%, 100% { transform: scaleY(1); }
+  94% { transform: scaleY(0.08); }
+}
+.bot-olho {
+  transform-origin: center;
+  animation: bot-piscar 4.2s infinite;
+}
+
+/* LED da vaga pulsando suavemente (glow na cor do estado) */
+@keyframes led-pulso {
+  0%, 100% { opacity: 1; box-shadow: 0 0 8px 3px currentColor; }
+  50% { opacity: 0.6; box-shadow: 0 0 2px 0 currentColor; }
+}
+.led-pulso { animation: led-pulso 1.8s ease-in-out infinite; }
+
+/* Carro aparecendo quando a vaga fica ocupada */
+@keyframes carro-entrar {
+  from { opacity: 0; transform: translateY(10px) scale(0.8); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+.carro-entrar { animation: carro-entrar 0.5s ease-out; }
+
+/* Painel lateral de detalhes deslizando */
+@keyframes painel-entrar {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
+.painel-entrar { animation: painel-entrar 0.3s ease-out; }
+
+/* Conteudo subindo suavemente (transicao entre paginas) */
+@keyframes subir-suave {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.subir-suave { animation: subir-suave 0.4s ease-out; }
+
+/* Indicador ONLINE pulsando */
+@keyframes ponto-online {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.35; }
+}
+.ponto-online { animation: ponto-online 1.6s ease-in-out infinite; }
+
+/* Barra de rolagem discreta */
+.scroll-fino::-webkit-scrollbar { width: 6px; }
+.scroll-fino::-webkit-scrollbar-thumb { background: #334155; border-radius: 3px; }
+.scroll-fino::-webkit-scrollbar-track { background: transparent; }
