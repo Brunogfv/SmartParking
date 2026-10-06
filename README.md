@@ -418,13 +418,35 @@ curl.exe "http://localhost:3000/api/eventos?limite=10&vaga=A01"
 
 ## 🖼️ Demonstração
 
-> Espaço reservado para screenshots reais (a serem adicionadas em `docs/images/`):
+### 🅿️ Mapa do estacionamento (tela principal)
 
-```markdown
+Planta digital da maquete: entrada → cancela → vagas A01/A02/A03 → saída → cancela, com carros, LEDs pulsando, sensores e o SmartBot ao lado.
+
 ![Mapa do estacionamento](docs/images/mapa-estacionamento.png)
+
+### 🤖 SmartBot
+
+Assistente visual com falas baseadas no estado real (ex.: *"Temos apenas 1 vaga disponível."*).
+
 ![SmartBot](docs/images/smartbot.png)
+
+### 🚧 Controle de acesso
+
+Cancelas de entrada e saída com estado e sensores.
+
+![Controle de acesso](docs/images/controle-acesso.png)
+
+### 📜 Histórico de eventos
+
+Linha do tempo (PostgreSQL) + eventos brutos (MongoDB).
+
 ![Histórico](docs/images/historico.png)
-```
+
+### 📱 Versão mobile
+
+Layout responsivo (vagas em coluna, navegação inferior).
+
+![Versão mobile](docs/images/mobile-estacionamento.png)
 
 ## 🎥 Demonstração em vídeo
 
@@ -448,10 +470,10 @@ O trabalho explora, de forma integrada: **sistemas embarcados** (ESP32, sensores
 
 | Integrante | GitHub |
 |---|---|
-| Alberto Breno | *(TODO)* |
-| Arthur Padilha | *(TODO)* |
+| Alberto Breno | [@Albertobbl](https://github.com/Albertobbl) |
+| Arthur Padilha | [@ArthurPadlha](https://github.com/ArthurPadlha) |
 | Bruno Gomes | [@Brunogfv](https://github.com/Brunogfv) |
-| Leandro Machado | *(TODO)* |
+| Leandro Machado | [@leomach](https://github.com/leomach) |
 
 ---
 
