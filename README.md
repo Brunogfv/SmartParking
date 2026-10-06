@@ -448,9 +448,19 @@ Layout responsivo (vagas em coluna, navegação inferior).
 
 ![Versão mobile](docs/images/mobile-estacionamento.png)
 
+### 🎬 Tour completo (34 s)
+
+Do estado livre ao **LOTADO**: vagas sendo ocupadas em tempo real, SmartBot reagindo e as telas de histórico e SmartBot.
+
+![Tour pelo SmartParking](docs/video/demo.gif)
+
+> ▶️ [Assistir em MP4 (melhor qualidade)](docs/video/demo.mp4)
+
 ## 🎥 Demonstração em vídeo
 
-👉 TODO: inserir o link do vídeo de demonstração.
+▶️ **[Assistir ao tour completo (MP4)](docs/video/demo.mp4)** — 34 segundos mostrando: estado livre → vagas sendo ocupadas → LOTADO → liberação → histórico → SmartBot.
+
+O GIF da mesma demonstração está na seção [🖼️ Demonstração](#-demonstração) acima.
 
 ---
 
