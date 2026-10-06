@@ -1,0 +1,36 @@
+# ============================================================
+# SmartParking - arquivos ignorados pelo Git (raiz do monorepo)
+# ============================================================
+
+# Dependencias Node.js
+node_modules/
+
+# Builds
+dist/
+build/
+
+# Variaveis de ambiente (contem segredos)
+.env
+.env.*
+!.env.example
+
+# Firmware ESP32: configuracao local (credenciais Wi-Fi, IPs, MACs)
+config.h
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+
+# Editores / IDEs
+.vscode/
+.idea/
+*.suo
+*.sw?
+
+# Docker (dados locais, se houver)
+data/
