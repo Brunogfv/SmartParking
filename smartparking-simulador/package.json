@@ -1,0 +1,25 @@
+{
+  "name": "smartparking-simulador",
+  "version": "1.0.0",
+  "description": "Simula o ESP32 enviando dados de vagas para a API do SmartParking",
+  "main": "simulador.js",
+  "scripts": {
+    "start": "node simulador.js",
+    "aleatorio": "node simulador.js aleatorio",
+    "sequencial": "node simulador.js sequencial",
+    "manual": "node simulador.js manual",
+    "carga": "node simulador.js carga",
+    "cenario": "node simulador.js cenario"
+  },
+  "keywords": [
+    "esp32",
+    "smartparking",
+    "simulador"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.7.9",
+    "chalk": "^4.1.2",
+    "dotenv": "^16.4.7"
+  }
+}
