@@ -1,0 +1,18 @@
+# ============================================================
+# SmartParking - MongoDB via Docker
+# Subir:    docker compose up -d
+# Parar:    docker compose down
+# Shell:    docker exec -it smartparking-mongodb mongosh
+# ============================================================
+services:
+  mongodb:
+    image: mongo:7
+    container_name: smartparking-mongodb
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb_data:/data/db
+
+volumes:
+  mongodb_data:

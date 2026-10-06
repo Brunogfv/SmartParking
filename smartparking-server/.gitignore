@@ -1,0 +1,13 @@
+# Dependencias do Node.js
+node_modules/
+
+# Arquivos de ambiente (contem segredos)
+.env
+
+# Logs
+logs/
+*.log
+
+# Arquivos do sistema operacional
+.DS_Store
+Thumbs.db
