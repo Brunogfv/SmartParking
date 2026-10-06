@@ -9,6 +9,7 @@
 [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-hist%C3%B3rico-4169E1?logo=postgresql&logoColor=white)](smartparking-server/)
 [![MongoDB](https://img.shields.io/badge/MongoDB-estado%20%2B%20eventos-47A248?logo=mongodb&logoColor=white)](smartparking-server/)
 [![Docker](https://img.shields.io/badge/Docker-MongoDB-2496ED?logo=docker&logoColor=white)](smartparking-server/docker-compose.yml)
+[![License: MIT](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 
 Estacionamento inteligente com monitoramento de 3 vagas (sendo uma preferencial), controle de cancelas de entrada e saida, robô com display OLED e dashboard web em tempo real.
 
@@ -433,19 +434,24 @@ curl.exe "http://localhost:3000/api/eventos?limite=10&vaga=A01"
 
 ## 📚 Projeto acadêmico
 
-Projeto desenvolvido para fins acadêmicos, explorando integração entre **banco de dados relacional (PostgreSQL)** e **não relacional (MongoDB)** no mesmo sistema, além de IoT com ESP32.
+Projeto desenvolvido no **Instituto Federal de Pernambuco (IFPE) — Campus Garanhuns**, no curso de **Análise e Desenvolvimento de Sistemas**, integrando três disciplinas:
 
-- **Disciplina:** Banco de Dados 2 *(conforme escopo do projeto)*
-- **Instituição:** TODO
-- **Curso:** TODO
-- **Professor(a):** TODO
+| Disciplina | Professor(a) |
+|---|---|
+| Sistemas Embarcados | Lauro André |
+| Programação Web 2 | Jair Galvão |
+| Banco de Dados 2 | Paulo André |
+
+O trabalho explora, de forma integrada: **sistemas embarcados** (ESP32, sensores, servos, OLED e comunicação ESP-NOW/Wi-Fi), **desenvolvimento web** (API Node.js/Express e dashboard React) e **bancos de dados** (relacional PostgreSQL + não relacional MongoDB no mesmo sistema).
 
 ### 👥 Integrantes
 
 | Integrante | GitHub |
 |---|---|
-| Bruno *(TODO: nome completo)* | [@Brunogfv](https://github.com/Brunogfv) |
-| TODO | TODO |
+| Alberto Breno | *(TODO)* |
+| Arthur Padilha | *(TODO)* |
+| Bruno Gomes | [@Brunogfv](https://github.com/Brunogfv) |
+| Leandro Machado | *(TODO)* |
 
 ---
 
@@ -474,4 +480,4 @@ Projeto desenvolvido para fins acadêmicos, explorando integração entre **banc
 
 ## 📄 Licença
 
-**Não definida.** O projeto não possui licença no momento — todos os direitos reservados aos autores. Se quiser publicá-lo como open source, escolha uma licença (MIT, Apache 2.0 etc.) e adicione o arquivo `LICENSE`.
+Este projeto está licenciado sob a licença **MIT** — veja o arquivo [LICENSE](LICENSE).
