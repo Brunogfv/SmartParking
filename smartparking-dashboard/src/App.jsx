@@ -1,8 +1,9 @@
 // ============================================================
 // App - shell do SmartParking
 // Navegacao: Estacionamento (padrao) | SmartBot | Acesso | Historico
+// Suporta link direto via hash (ex: /#historico)
 // ============================================================
-import { useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { usePolling } from "./hooks/usePolling";
 import { buscarVagas } from "./services/api";
 import Sidebar from "./components/layout/Sidebar";
@@ -19,8 +20,26 @@ const PAGINAS = {
   historico: HistoryPage
 };
 
+// Le a pagina da URL (#hash); usa "estacionamento" como padrao
+function paginaDoHash() {
+  const hash = window.location.hash.replace("#", "");
+  return PAGINAS[hash] ? hash : "estacionamento";
+}
+
 export default function App() {
-  const [pagina, setPagina] = useState("estacionamento");
+  const [pagina, setPagina] = useState(paginaDoHash);
+
+  // Navega atualizando estado + hash (permite link direto e voltar/avancar)
+  const navegar = useCallback((destino) => {
+    setPagina(destino);
+    window.location.hash = destino;
+  }, []);
+
+  useEffect(() => {
+    const aoMudarHash = () => setPagina(paginaDoHash());
+    window.addEventListener("hashchange", aoMudarHash);
+    return () => window.removeEventListener("hashchange", aoMudarHash);
+  }, []);
 
   // Polling do estado das vagas (compartilhado: barra de status + paginas)
   const vagas = usePolling(buscarVagas, 3000, 5000);
@@ -32,7 +51,7 @@ export default function App() {
   return (
     <div className="flex min-h-screen bg-slate-950 pb-16 text-slate-100 md:pb-0">
       {/* Navegacao */}
-      <Sidebar pagina={pagina} aoNavegar={setPagina} />
+      <Sidebar pagina={pagina} aoNavegar={navegar} />
 
       {/* Conteudo */}
       <div className="flex min-w-0 flex-1 flex-col">
@@ -44,7 +63,7 @@ export default function App() {
             <PaginaAtual
               vagasPolling={vagas}
               conectado={conectado}
-              aoNavegar={setPagina}
+              aoNavegar={navegar}
             />
           </div>
         </main>
