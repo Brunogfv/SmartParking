@@ -444,9 +444,22 @@ Linha do tempo (PostgreSQL) + eventos brutos (MongoDB).
 
 ### 📱 Versão mobile
 
-Layout responsivo (vagas em coluna, navegação inferior).
+Todas as telas se adaptam a celular (vagas em coluna, navegação inferior). Clique nas imagens para ampliar:
 
-![Versão mobile](docs/images/mobile-estacionamento.png)
+<table>
+  <tr>
+    <td align="center" width="25%"><img src="docs/images/mobile-estacionamento.png" width="220" alt="Estacionamento no celular" /></td>
+    <td align="center" width="25%"><img src="docs/images/mobile-smartbot.png" width="220" alt="SmartBot no celular" /></td>
+    <td align="center" width="25%"><img src="docs/images/mobile-acesso.png" width="220" alt="Controle de acesso no celular" /></td>
+    <td align="center" width="25%"><img src="docs/images/mobile-historico.png" width="220" alt="Histórico no celular" /></td>
+  </tr>
+  <tr>
+    <td align="center">🅿️ Estacionamento</td>
+    <td align="center">🤖 SmartBot</td>
+    <td align="center">🚧 Controle de Acesso</td>
+    <td align="center">📜 Histórico</td>
+  </tr>
+</table>
 
 ### 🎬 Tour completo (34 s)
 
